@@ -77,35 +77,34 @@ END
 #include <iostream>
 using namespace std;
 
-int main() {
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
 
-    string word1 = "abc";
-    string word2 = "pqr";
+        string merged = "";
 
-    string merged = "";
+        int maxLength;
 
-    int maxLength;
-
-    if(word1.length() > word2.length()) {
-        maxLength = word1.length();
-    }
-    else {
-        maxLength = word2.length();
-    }
-
-    for(int i = 0; i < maxLength; i++) {
-
-        if(i < word1.length()) {
-            merged = merged + word1[i];
+        if(word1.length() > word2.length()) {
+            maxLength = word1.length();
+        }
+        else {
+            maxLength = word2.length();
         }
 
-        
-        if(i < word2.length()) {
-            merged = merged + word2[i];
+        for(int i = 0; i < maxLength; i++) {
+
+            if(i < word1.length()) {
+                merged = merged + word1[i];
+            }
+
+            if(i < word2.length()) {
+                merged = merged + word2[i];
+            }
         }
+
+        return merged;
     }
+};
 
-    cout << merged;
 
-    return 0;
-}
