@@ -1,5 +1,5 @@
 //Suppose we will handle some events from the given HTML code
-// This my note on Basic Event Handling in JS
+// This my note on Basic Event Handling in JS...
 
 <!DOCTYPE html>
 <html lang="en">
