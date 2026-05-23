@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Food Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .food {
+      border: 2px solid skyblue;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .food:hover {
+      transform: scale(1.02);
+    }
+
+    .food img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .food h3 {
+      margin: 10px 0 5px;
+    }
+
+    .food p {
+      margin: 5px 0;
+    }
+
+    .food button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: skyblue;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 576px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 992px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .food img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_960_720.jpg" alt="Burger">
+      <h3>Food Item - 1</h3>
+      <p>Price: $10.00</p>
+      <p>Delicious burger with fresh lettuce and juicy beef patty.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg" alt="Hamburger">
+      <h3>Food Item - 2</h3>
+      <p>Price: $12.00</p>
+      <p>Classic hamburger loaded with cheese and veggies.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_960_720.jpg" alt="Burger">
+      <h3>Food Item - 3</h3>
+      <p>Price: $9.50</p>
+      <p>Spicy grilled burger topped with jalapeños and sauce.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg" alt="Hamburger">
+      <h3>Food Item - 4</h3>
+      <p>Price: $11.00</p>
+      <p>Double layer hamburger with extra cheese and bacon.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_960_720.jpg" alt="Burger">
+      <h3>Food Item - 5</h3>
+      <p>Price: $10.50</p>
+      <p>Smoky burger with caramelized onions and BBQ sauce.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg" alt="Hamburger">
+      <h3>Food Item - 6</h3>
+      <p>Price: $13.00</p>
+      <p>Juicy beef hamburger with crispy lettuce and pickles.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_960_720.jpg" alt="Burger">
+      <h3>Food Item - 7</h3>
+      <p>Price: $9.99</p>
+      <p>Classic grilled burger with American cheese and mustard.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg" alt="Hamburger">
+      <h3>Food Item - 8</h3>
+      <p>Price: $10.99</p>
+      <p>All-time favorite hamburger with crispy fried onions.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_960_720.jpg" alt="Burger">
+      <h3>Food Item - 9</h3>
+      <p>Price: $8.75</p>
+      <p>Simple beef burger with lettuce, tomato, and sauce.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg" alt="Hamburger">
+      <h3>Food Item - 10</h3>
+      <p>Price: $14.25</p>
+      <p>Gourmet hamburger with truffle mayo and grilled mushrooms.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_960_720.jpg" alt="Burger">
+      <h3>Food Item - 11</h3>
+      <p>Price: $11.49</p>
+      <p>BBQ burger stacked with crispy bacon and cheddar.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="food">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg" alt="Hamburger">
+      <h3>Food Item - 12</h3>
+      <p>Price: $13.50</p>
+      <p>Loaded hamburger with everything you can dream of!</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
+</body>
+</html>

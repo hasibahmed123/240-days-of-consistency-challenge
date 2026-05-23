@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitha Ghor</title>
+<style>
+body {
+background-color: aqua;
+
+}
+
+ form .info label {
+
+    display: block;
+    margin: 5px;
+}
+
+</style>
+  <link rel="stylesheet" href="./styles/nav.css">
+</head>
+
+
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="form.html">Form</a></li>
+<li><a href="table.html">Table</a></li>
+<li><a href="center-flex-nav.html">Home</a></li>
+</ul>
+</nav>
+</header>
+
+
+<head> 
+
+    <h2>Jamal's Pitha Ghor</h2>
+<form >  
+    <fieldset class="info">
+    <legend>your Info</legend>
+
+    <label for="name">your name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="" id="email" placeholder="Enter your email" required>
+
+    </fieldset>
+ 
+    <fieldset>
+    <legend>Choose your favorite pitha</legend>
+
+    <input type="radio" name="pitha" id="bhapa" >
+    <label for="bhapa">Bhapa Pitha</label>
+
+    <input type="radio" name="pitha" id="chitoi" >
+    <label for="chitoi">chitoi Pitha</label>
+
+    <p> <b>Note:</b> here in "name", if we use "name" as "pitha" or other same name
+        we can only select one among many pitha items.</p>
+
+    </fieldset>
+
+    <fieldset>
+<legend>vorta Items</legend>
+
+<input type="checkbox" name="vorta" id="sorisha">
+<label for="sorisha">Sorisha</label>
+
+<input type="checkbox" name="vorta" id="shutki">
+<label for="shutki">shutki</label>
+
+<input type="checkbox" name="vorta" id="morich vorta">
+<label for="morich vorta">morich vorta</label>
+
+    </fieldset>
+
+    <fieldset>
+<legend>Extra Info</legend>
+<textarea cols="40" rows="5" name="" id=""></textarea>
+    </fieldset>
+
+<input type="button" value="Submit" onclick="alert('Thank you for your submission!')">
+<input type="reset" value="Reset">
+
+</form>
+
+</head> 
+</body>
+
+</html>

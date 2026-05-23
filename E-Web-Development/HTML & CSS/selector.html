@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Selectors Example</title>
+<style>
+
+    *{
+    margin: 2;
+    }
+
+p {
+ color: blueviolet
+
+}
+
+#first, li {
+    color: red;
+    font-size: 20px;
+    background-color: yellow;
+}
+
+.classTag, .another {
+    color: green;
+    font-size: 18px;
+    background-color: lightgray;
+    font-style: bold;
+
+}
+
+input[type="password"] {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+/* Here input[type="password"] is an attribute selector */
+
+.css {
+    color: red;
+    font-size: 20px;
+    background-color: rgba(8, 0, 255, 0.35);
+    font-style: bold;
+}
+
+/* Here we use span tag for styling specfific texts in a paragraph */
+
+.blog {
+    background-color: lightyellow;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+/* This is a class selector for the blog section, this is opposite of span tag process */
+
+
+</style>
+</head>
+
+
+<body>
+
+<h3>exploring different selectors in CSS</h3>
+ <p id="first">css is very cool mate! </p>
+ <p>css is <span class="css"> very hot </span> </p>    
+ <p>css is very cool mate!</p> 
+ <p>css is very cool mate!</p> 
+ <p>css is very cool mate!</p> 
+ <p>css is very cool mate!</p> 
+ <p>css is very cool mate!</p> 
+ <p class="classTag">css is very cool mate!</p> 
+ <p class="classTag">css is very cool mate!</p> 
+ <p class="classTag">css is very cool mate!</p> 
+ <p class="another">css is very cool mate!</p> 
+ <p class="another">css is very cool mate!</p> 
+ <p>css is very cool mate!</p> 
+ <p>css is very cool mate!</p> 
+ 
+ <ol>
+<li>Elenent selector</li>
+<li>ID selector</li>
+<li>Class Selector</li>
+ </ol>
+
+<div class="blog">
+<h3>My Blogsite</h3>
+
+<p>My Name is Hasib</p>
+<p>My Name is Hasib</p>
+</div>
+
+ <input type="password" placeholder="Enter your password">
+<input type="text" placeholder="Enter your name">
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .container div {
+            border: 2px solid black;
+            height: 100px;
+            width: 200px;
+        }
+
+        .box-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            font-size: 4em;
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+        }
+
+        .user-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* optional spacing between users */
+        }
+
+        .user {
+            border: 2px solid black; /* FIXED: was invalid 'color(srgb red green blue)' */
+            height: 150px;
+            width: 150px;
+            font-size: 2em;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+
+<div class="box-container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+<p>Note: .user{user-$}*3</p>
+<div class="user-container">
+    <div class="user">user-1</div>
+    <div class="user">user-2</div>
+    <div class="user">user-3</div>
+</div>
+
+</body>
+</html>
