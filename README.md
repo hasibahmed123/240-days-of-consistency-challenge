@@ -1,4 +1,4 @@
-# "240-days-of-consistency-challenge - started from 20/05/26 Insha'Allah" 
+# "240-days-of-consistency-challenge - started from 20/05/26" 
 
 Daily progress in:
 - Web Development
@@ -13,6 +13,6 @@ To develop industry-level consistency and practical engineering skills through d
 
 || "Code & Push" || git add . || git commit -m "commit here" || git pull origin main --rebase || git push origin main ||
 
-# Daily Update:
+# Daily Updates:
 
 
