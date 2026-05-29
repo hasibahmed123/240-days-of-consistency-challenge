@@ -14,6 +14,5 @@ To develop industry-level consistency and practical engineering skills through d
 || "Code & Push" || git add . || git commit -m "commit here" || git pull origin main --rebase || git push origin main ||
 
 # Daily Updates:
-29/5 - solved HTTPS room from THM & a simple problem on Function
-
+29/5 - solved HTTPS room from THM & a simple problem on Function from HR
 
