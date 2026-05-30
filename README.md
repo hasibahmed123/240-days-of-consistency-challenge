@@ -15,4 +15,6 @@ To develop industry-level consistency and practical engineering skills through d
 
 # Daily Updates:
 29/5 - solved HTTPS room from THM & a simple problem on Function from HR
+30/5 - solved How_Web_Works room from THM
+
 
