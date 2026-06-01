@@ -17,5 +17,6 @@ To develop industry-level consistency and practical engineering skills through d
 - 29/5 - solved HTTPS room from THM & a simple problem on Function from HR
 - 30/5 - solved How_Web_Works room from THM
 - 31/5 - solved "Inside a Computer System" room from THM and "Introduction to Node.js"
+- 1/6 - Designed the system architecture and development roadmap for my new project "SecureVault"
 
 
