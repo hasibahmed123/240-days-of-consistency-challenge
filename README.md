@@ -21,5 +21,6 @@ To develop industry-level consistency and practical engineering skills through d
 - 1/6 - Designed the system architecture and development roadmap for my new project "SecureVault"
 - 2/6 - needed to revise all of the prevous lessons.
 - 4/6 - needed to revise all of the prevous lessons.
+- 5/6 - js practice  + Ends of Eid Vacation 
 
 
