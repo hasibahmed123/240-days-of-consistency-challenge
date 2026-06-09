@@ -24,6 +24,7 @@ To develop industry-level consistency and practical engineering skills through d
 - 5/6 - js practice  + Ends of Eid Vacation
 - 6/6 - solved Computer_Type_Room from THM
 - 6/7 - RECONNAISSANCE and INFO Gathering
+- 6/9 - Initialized a Practice Project Task using HTML_CSS_DaisyUI and created its repo - "Payoo Mobile Bank -1"
 
 
 
