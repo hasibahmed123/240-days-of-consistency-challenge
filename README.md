@@ -11,6 +11,12 @@ Daily progress in:
 Goal:
 To develop industry-level consistency and practical engineering skills through daily deliberate practice.
 
+📝 Policies:
+1. I will study A–B–C–D–E regularly every day.
+2. During academic tests, I will reduce pace but maintain my streak.
+3. During specific learning challenges, I will focus only on the selected topic(s) and their milestones until completion, instead of covering all of A–B–C–D–E...
+4. Contributions to other project repositories outside of this repository will also be counted as daily learning and a daily task under the 240-Day Challenge
+
 || "Code & Push" || git add . || git commit -m "commit here" || git pull origin main --rebase || git push origin main ||
 
 # Daily Updates:
