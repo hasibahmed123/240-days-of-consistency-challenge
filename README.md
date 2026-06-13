@@ -8,8 +8,15 @@ Daily progress in:
 - TryHackMe Room Completion
 - DevOps [will start shortly after completing the Web Development insha'Allah]
 
-Goal:
+# Goal:
 To develop industry-level consistency and practical engineering skills through daily deliberate practice.
+
+# Policies
+1. I will study A–B–C–D–E every day.
+2. During academic exams, I will reduce my pace but maintain my streak.
+3. During focused learning challenges, I will work only on the selected topic(s) and milestones until completion.
+4. Contributions to other repositories count toward the 240-Day Challenge streak.
+5. Broken streaks will be repaired afterward.
 
 || "Code & Push" || git add . || git commit -m "commit here" || git pull origin main --rebase || git push origin main ||
 
@@ -23,6 +30,10 @@ To develop industry-level consistency and practical engineering skills through d
 - 4/6 - needed to revise all of the prevous lessons.
 - 5/6 - js practice  + Ends of Eid Vacation
 - 6/6 - solved Computer_Type_Room from THM
+- 7/6 - RECONNAISSANCE and INFO Gathering
+- 9/6 - Initialized a Practice Project Task using HTML_CSS_DaisyUI and created its repo - "Payoo Mobile Bank -1"
+- 10/6 - Half completed "Payoo Mobile Bank -1" using HTML_CSS_DaisyUI
+- 11/6 - Completing the practice project Payoo Mobile Bank 1 & Payoo Mobile Bank 2, Then will upload to the Repo
 
 
 

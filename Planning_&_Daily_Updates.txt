@@ -2,11 +2,12 @@
 1. I will study A–B–C–D–E regularly every day.
 2. During academic tests, I will reduce pace but maintain my streak.
 3. During specific learning challenges, I will focus only on the selected topic(s) and their milestones until completion, instead of covering all of A–B–C–D–E...
-
+4. Contributions to other project repositories outside of this repository will also be counted as daily learning and a daily task under the 240-Day Challenge
 
 📝Missing Streaks count due to Emergencies & Events - Will be repaired after:
 1. 28/5 for Eid ul Adha
 2. 3/6
+3. 8/6
 
 
 
