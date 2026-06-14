@@ -35,6 +35,7 @@ To develop industry-level consistency and practical engineering skills through d
 - 10/6 - Half completed "Payoo Mobile Bank -1" using HTML_CSS_DaisyUI
 - 11/6 - Completing the practice project Payoo Mobile Bank 1 & Payoo Mobile Bank 2, Then will upload to the Repo
 - 13/6 - THM 1 Room Solved
+- 14/6 - solved THM 3 Rooms of Linux, studied Git commands basic to pro
 
 
 
