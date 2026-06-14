@@ -1,0 +1,137 @@
+GIT COMPLETE CHEAT SHEET (BEGINNER → ADVANCED)
+
+==================================================
+1. CORE CONCEPT
+==================================================
+Working Directory  →  Staging Area  →  Local Repo  →  Remote Repo
+   (edit files)        (git add)        (git commit)    (git push)
+
+==================================================
+2. BASIC SETUP
+==================================================
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+git config --list
+
+==================================================
+3. START / CLONE REPOSITORY
+==================================================
+git init
+git clone <repository-url>
+
+==================================================
+4. DAILY WORKFLOW (MOST IMPORTANT)
+==================================================
+git status
+git add .
+git commit -m "message"
+git push origin main
+
+==================================================
+5. GET UPDATES FROM GITHUB
+==================================================
+git pull origin main
+
+==================================================
+6. VIEW HISTORY
+==================================================
+git log
+git log --oneline
+
+==================================================
+7. CHECK CHANGES
+==================================================
+git diff
+git diff --staged
+
+==================================================
+8. UNDO CHANGES
+==================================================
+git checkout -- file.txt        (discard local changes)
+git reset file.txt              (unstage file)
+
+SOFT RESET (keep changes):
+git reset --soft HEAD~1
+
+DEFAULT RESET:
+git reset HEAD~1
+
+HARD RESET (DANGEROUS):
+git reset --hard HEAD~1
+
+==================================================
+9. BRANCHING
+==================================================
+git branch feature
+git checkout feature
+
+MODERN WAY:
+git switch feature
+git switch -c feature
+
+DELETE BRANCH:
+git branch -d feature
+
+==================================================
+10. MERGING
+==================================================
+git merge feature
+
+==================================================
+11. REMOTE REPOSITORY
+==================================================
+git remote add origin <url>
+git remote -v
+
+==================================================
+12. STASH (TEMP SAVE WORK)
+==================================================
+git stash
+git stash list
+git stash pop
+
+==================================================
+13. FETCH vs PULL
+==================================================
+git fetch     (download only)
+git pull      (download + merge)
+
+==================================================
+14. REBASE (ADVANCED CLEAN HISTORY)
+==================================================
+git rebase main
+git rebase -i HEAD~3
+
+==================================================
+15. FORCE PUSH (USE CAREFULLY)
+==================================================
+git push -f
+
+==================================================
+16. ADVANCED WORKFLOW THINKING
+==================================================
+Feature workflow:
+git switch -c feature-x
+git add .
+git commit -m "done"
+git push origin feature-x
+
+Clean update workflow:
+git pull --rebase
+
+==================================================
+17. LOCK ISSUE FIX (WINDOWS)
+==================================================
+If .lock error happens:
+
+taskkill /F /IM git.exe
+del /F /Q .git\*.lock
+
+==================================================
+18. GOLDEN RULES
+==================================================
+- Always run git status first
+- Never run multiple git commands at once
+- Never interrupt commit/push/pull
+- Prefer small commits
+- Use branches for features
