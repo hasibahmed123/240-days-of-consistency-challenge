@@ -37,6 +37,7 @@ To develop industry-level consistency and practical engineering skills through d
 - 13/6 - THM 1 Room Solved
 - 14/6 - solved THM 3 Rooms of Linux, studied Git commands basic to pro
 - 15/6 - revised
+- 16/6 - Finishing 10 Classes with Notes in Ethical Hacking from EHP course by Bytecapsul. will be uploaded soon
 
 
 
