@@ -1,0 +1,366 @@
+
+================================================================================
+                    WEB APPLICATION SECURITY TESTING METHOD
+                             ASCII STUDY NOTE
+================================================================================
+
+Credit: Sakib Haque Zisan
+
++----------------------------------------------------------------------------+
+|                              METHODOLOGY FLOW                              |
++----------------------------------------------------------------------------+
+
+[1] RECON
+    |
+    +-- Footprinting Website (OSINT)
+    +-- Browser Addons Recon
+    +-- Google Dorking
+    +-- GitHub Dorking
+    +-- Port Scanning
+    +-- DNS Information Gathering
+    +-- Whois Lookup
+    +-- WAF Identification
+    +-- Shodan Dorking
+
+[2] ENUMERATION
+    |
+    +-- Security Header Check
+    +-- Subdomain Enumeration
+    +-- Live Domain Filtering
+    +-- URL Extraction
+    +-- Content Discovery
+    +-- Parameter Discovery
+    +-- URL Sorting
+
+[3] VULNERABILITY ASSESSMENT
+    |
+    +-- Automated Scanning
+    +-- Manual OWASP Top 10 Testing
+    +-- Vulnerability Database Analysis
+
+[4] REPORT WRITING
+
+
+================================================================================
+STEP 01 : FOOTPRINTING WEBSITE (OSINT)
+================================================================================
+
+[*] Website to IP Lookup
+[*] X-Ray Website Analysis
+[*] Geographical Location Analysis
+[*] Financial Information Collection
+[*] Business Profile Investigation
+[*] Alert Monitoring
+[*] Online Reputation Tracking
+[*] Forum / Blog Research
+[*] Public Repository Research
+[*] Social Media Footprinting
+[*] Social Engineering Information Gathering
+[*] Directory Structure Analysis
+[*] Archive Analysis
+[*] Metadata Extraction
+[*] Website Link Extraction
+[*] Email Footprinting
+
+
+================================================================================
+STEP 02 : RECON WITH BROWSER ADDONS
+================================================================================
+
++ Technology Detection      -> Wappalyzer, BuiltWith
++ JS Vulnerability Check    -> Retire.js
++ Service & Port Discovery  -> Shodan
++ Web Testing Assistance    -> Knoxss, HackTools
+
+
+================================================================================
+STEP 03 : GOOGLE DORKING
+================================================================================
+
+Example:
+    site:target.com -site:www.target.com
+
+Purpose:
+    - Discover exposed pages
+    - Find hidden resources
+    - Gather public information
+
+
+================================================================================
+STEP 04 : GITHUB DORKING
+================================================================================
+
+Search Examples:
+    "target.com" "dev"
+    "dev.target.com"
+    "target.com" API_key
+    "target.com" password
+    "api.target.com"
+
+Potential Findings:
+    [!] FTP Credentials
+    [!] Secret Keys
+    [!] Employee Credentials
+    [!] API Endpoints
+    [!] Domain Patterns
+
+
+================================================================================
+STEP 05 : PORT SCANNING
+================================================================================
+
+Tools:
+    + Nmap
+    + UnicornScan
+    + Angry IP Scanner
+    + Netcat
+
+Goal:
+    Identify open ports and running services.
+
+
+================================================================================
+STEP 06 : DNS INFORMATION GATHERING
+================================================================================
+
+Tools:
+    + Dig
+    + DNS Lookup
+    + MXToolbox
+    + Nslookup
+    + ViewDNS
+
+
+================================================================================
+STEP 07 : WHOIS LOOKUP
+================================================================================
+
+Goal:
+    Gather domain registration information.
+
+
+================================================================================
+STEP 08 : WAF IDENTIFICATION
+================================================================================
+
+Tools:
+    + Wafw00f
+    + WhatWaf
+
+Goal:
+    Detect whether a Web Application Firewall exists.
+
+
+================================================================================
+STEP 09 : SHODAN DORKING
+================================================================================
+
+Shodan can reveal:
+    + Open Services
+    + SSL Certificates
+    + Vulnerable Hosts
+    + Device Information
+    + Exposure Statistics
+
+
+================================================================================
+STEP 10 : SECURITY HEADER CHECK
+================================================================================
+
+Review:
+    + CSP
+    + HSTS
+    + X-Frame-Options
+    + X-Content-Type-Options
+    + Referrer-Policy
+    + Permissions-Policy
+
+
+================================================================================
+STEP 11 : SUBDOMAIN ENUMERATION
+================================================================================
+
+Top Tools:
+    1. Sublist3r
+    2. Amass
+    3. Subfinder
+    4. Censys
+    5. Assetnote
+    6. Findomain
+    7. SecurityTrails
+    8. Knockpy
+    9. DNSDumpster
+   10. Aquatone
+
+
+================================================================================
+STEP 12 : FILTERING LIVE DOMAINS
+================================================================================
+
+Workflow:
+
+    Collect Subdomains
+            |
+            v
+    Merge & Remove Duplicates
+            |
+            v
+    Run HTTPX
+            |
+            v
+    Identify Active Domains
+
+Example:
+    subfinder -d target.com -o subf.txt
+    assetfinder -subs-only target.com > asset.txt
+    httpx -l subdomains.txt -o active.txt
+
+
+================================================================================
+STEP 13 : URL EXTRACTION
+================================================================================
+
+Tools:
+    + Httpx
+    + WaybackURLs
+
+
+================================================================================
+STEP 14 : CONTENT DISCOVERY
+================================================================================
+
+Tools:
+    + Gobuster
+    + Dirbuster
+    + Httpx
+
+
+================================================================================
+STEP 15 : PARAMETER DISCOVERY
+================================================================================
+
+Tools:
+    + Arjun
+    + ParamSpider
+    + WaybackURLs
+
+
+================================================================================
+STEP 16 : URL SORTING
+================================================================================
+
+Tool:
+    + GF (grep wrapper)
+
+
+================================================================================
+STEP 17 : AUTOMATED VULNERABILITY SCANNING
+================================================================================
+
+    + Nessus
+    + Burp Suite
+    + OWASP ZAP
+    + Acunetix
+    + SQLMap
+    + WPScan
+
+
+================================================================================
+STEP 18 : MANUAL TESTING (OWASP TOP 10 - 2021)
+================================================================================
+
+[A01] Broken Access Control
+    - IDOR
+    - Path Traversal
+    - Privilege Escalation
+
+[A02] Cryptographic Failures
+    - Weak Ciphers
+    - Cleartext Data Exposure
+    - Poor Randomness
+
+[A03] Injection
+    - SQLi
+    - XSS
+    - Command Injection
+    - LDAP Injection
+    - SSTI
+    - NoSQL Injection
+
+[A04] Insecure Design
+    - Hardcoded Credentials
+    - Session Fixation
+    - Weak Error Handling
+
+[A05] Security Misconfiguration
+    - Default Credentials
+    - Insecure Permissions
+    - Directory Listing
+    - Misconfigured CORS
+
+[A06] Vulnerable Components
+    - Outdated Libraries
+    - Unpatched Software
+
+[A07] Authentication Failures
+    - Brute Force
+    - Credential Stuffing
+    - Session Hijacking
+    - Weak Password Policy
+
+[A08] Software & Data Integrity Failures
+    - SSRF Variants
+    - Update Tampering
+    - Redirect Issues
+
+[A09] Logging & Monitoring Failures
+    - Missing Logs
+    - Weak Monitoring
+
+[A10] SSRF
+    - Authenticated SSRF
+    - Unauthenticated SSRF
+
+
+================================================================================
+STEP 19 : VULNERABILITY DATABASE ANALYSIS
+================================================================================
+
+Resources:
+    + Exploit-DB
+    + VulDB
+    + CVEDetails
+    + Patchstack
+
+
+================================================================================
+STEP 20 : REPORT WRITING
+================================================================================
+
++----------------------------- REPORT STRUCTURE -----------------------------+
+
+1. Introduction
+2. Methodology
+3. Findings
+4. Evidence
+5. Recommendations
+6. Conclusion
+
++-------------------------------------------------------------------------+
+|                         QUICK BUG HUNT CHECKLIST                        |
++-------------------------------------------------------------------------+
+
+[ ] Recon Complete
+[ ] Subdomains Enumerated
+[ ] Active Hosts Verified
+[ ] URLs Collected
+[ ] Parameters Identified
+[ ] Content Discovery Done
+[ ] Automated Scan Completed
+[ ] Manual OWASP Testing Completed
+[ ] Vulnerabilities Verified
+[ ] Report Written
+
+================================================================================
+END OF NOTE
+================================================================================
