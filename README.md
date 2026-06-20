@@ -39,6 +39,7 @@ To develop industry-level consistency and practical engineering skills through d
 - 15/6 - revised
 - 16/6 - Finishing 10 Classes with Notes in Ethical Hacking from EHP course by Bytecapsul. will be uploaded soon
 - 19/6 - Learnt about Golang Script, Assetfinder, Amass and Httprobe...Notes will be uploaded soon
+- 20/9 - Practicing Go for Automation Scripting
 
 
 
