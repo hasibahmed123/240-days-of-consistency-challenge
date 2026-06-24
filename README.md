@@ -42,6 +42,7 @@ To develop industry-level consistency and practical engineering skills through d
 - 20/6 - Ranked 5th in the mandatory CTF-4 exam conducted during the "Ethical Hacking for Professionals (EHP) – Batch 11
 - 22/6 - Solved THM rooms
 - 23/6 - Solved THM Room
+- 24/6 - Doing Byte Capsule Classes on SQL Injection
 
 
 
