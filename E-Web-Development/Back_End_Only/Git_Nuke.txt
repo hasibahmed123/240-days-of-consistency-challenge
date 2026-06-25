@@ -1,0 +1,25 @@
+Suppose You got DeadLock and running Process bullshits on your Repo, simply deploy this Tsar Bomba:
+
+"I don't care about the current rebase/merge. Make my local repo exactly match GitHub and remove all Git junk."
+
+Run this from anywhere in Command Prompt:
+
+cd /d C:\....(paste Main Path Directory)
+rmdir /S /Q .git\rebase-merge 2>nul
+rmdir /S /Q .git\rebase-apply 2>nul
+del /F /Q .git\HEAD.lock 2>nul
+del /F /Q .git\index.lock 2>nul
+del /F /Q .git\refs\heads\main.lock 2>nul
+git fetch origin
+git checkout -B main origin/main
+git reset --hard origin/main
+git clean -fd
+
+Then verify:
+git status
+
+Expected result:
+
+On branch main
+Your branch is up to date with 'origin/main'.
+nothing to commit, working tree clean
