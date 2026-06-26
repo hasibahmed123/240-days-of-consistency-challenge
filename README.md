@@ -44,6 +44,7 @@ To develop industry-level consistency and practical engineering skills through d
 - 23/6 - Solved THM Room
 - 24/6 - Doing Byte Capsule Classes on SQL Injection
 - 25/6 - Learnt to break deadlock of Git, solved THM room, earned some badges.
+- 26/6 - Learnt SQL Injection with Lab setup and uploaded Notes
 
 
 
