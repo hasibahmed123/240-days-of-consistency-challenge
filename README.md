@@ -46,5 +46,7 @@ To develop industry-level consistency and practical engineering skills through d
 - 25/6 - Learnt to break deadlock of Git, solved THM room, earned some badges.
 - 26/6 - Learnt SQL Injection with Lab setup and uploaded Notes
 - 27/6 - Solved THM Room
-- 28/6 - Learning how to make Bug_Bouny Report 
+- 28/6 - Learning how to make Bug_Bouny Report
+- 29/6 - More practice on Metasploit, Burbsuite and SQL Injection
+ 
 
