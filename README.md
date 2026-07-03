@@ -49,5 +49,6 @@ To develop industry-level consistency and practical engineering skills through d
 - 28/6 - Learning how to make Bug_Bouny Report
 - 29/6 - More practice on Metasploit, Burbsuite and SQL Injection
 - 1/7 -  Completed Cloud Computing Fundamentals Room from THM
+- 3/7 - Solved THM Room
  
 
