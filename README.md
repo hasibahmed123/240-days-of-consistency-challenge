@@ -51,5 +51,5 @@ To develop industry-level consistency and practical engineering skills through d
 - 1/7 -  Completed Cloud Computing Fundamentals Room from THM
 - 3/7 - Solved THM Room
 - 4/7 - Making THM report and ready to upload
-- 5/7 - Organizing everything to boost up soon 
+- 6/7 - Organizing everything to boost up soon 
 
