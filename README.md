@@ -52,5 +52,5 @@ To develop industry-level consistency and practical engineering skills through d
 - 3/7 - Solved THM Room
 - 4/7 - Making THM report and ready to upload
 - 6/7 - Organizing everything to boost up soon
-- 7/7 - Initializing...
+- 7/7 - Initializing.....
 
