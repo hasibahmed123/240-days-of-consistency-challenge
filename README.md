@@ -54,4 +54,5 @@ To develop industry-level consistency and practical engineering skills through d
 - 6/7 - Organizing everything to boost up soon
 - 7/7 - Initializing.....bulilding ptojects
 - 9/7 - THM room solved...
+- 11/7 - Participated in DIU AI Competition and got a cert: https://www.linkedin.com/in/hasib-ahmed-556764332/details/certifications/
 
