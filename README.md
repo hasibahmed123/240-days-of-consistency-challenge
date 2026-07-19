@@ -55,4 +55,5 @@ To develop industry-level consistency and practical engineering skills through d
 - 7/7 - Initializing.....bulilding ptojects
 - 9/7 - THM room solved...
 - 11/7 - Participated in DIU AI Competition and got a cert: https://www.linkedin.com/in/hasib-ahmed-556764332/details/certifications/
+- 19/7 - Introduction to XSS Scripting ( 8 Days-Off Gap will be recovered at the end)
 
