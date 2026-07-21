@@ -12,7 +12,7 @@ Daily progress in:
 To develop industry-level consistency and practical engineering skills through daily deliberate practice.
 
 # Policies
-1. I will study A–B–C–D–E every day.
+1. I will study A–B–C–D–E-F every day.
 2. During academic exams, I will reduce my pace but maintain my streak.
 3. During focused learning challenges, I will work only on the selected topic(s) and milestones until completion.
 4. Contributions to other repositories count toward the 240-Day Challenge streak.
