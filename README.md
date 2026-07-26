@@ -60,4 +60,5 @@ To develop industry-level consistency and practical engineering skills through d
 - 21/7 - Completed The Entire THM Pre Security Learning Path
 - 22/7 - Finishing Tasks...will be uploaded after 12 AM.
 - 23/7 - THM + DevOps + Web Dev + Cpp code
+- 26/7 - solved THM room
 
