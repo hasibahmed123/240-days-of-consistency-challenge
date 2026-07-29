@@ -1,4 +1,4 @@
-Reusable run.bat Template Notes
+Reusable run.bat Template Notes by Hasib.
 
 This batch file is a reusable launcher for most Node.js + Express +
 React (Vite) projects.
