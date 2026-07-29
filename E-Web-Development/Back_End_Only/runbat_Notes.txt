@@ -1,0 +1,133 @@
+Reusable run.bat Template Notes
+
+This batch file is a reusable launcher for most Node.js + Express +
+React (Vite) projects.
+
+Typical project structure
+
+    Project/
+    │
+    ├── backend/
+    ├── frontend/
+    └── run.bat
+
+Fully Commented Template
+
+    @echo off
+    :: Hide command echo for cleaner output
+
+    title My Project Launcher
+    :: Window title
+
+    cls
+    :: Clear the console
+
+    cd /d "%~dp0"
+    :: Move to the folder where this BAT file is located.
+    :: %~dp0 = drive + path of the BAT file.
+    /d also changes drive (e.g. C: -> D:)
+
+    set "ROOT_DIR=%cd%"
+    :: Save the project root path for reuse.
+
+    :: =========================
+    :: STEP 1 - Backend
+    :: =========================
+
+    pushd "%ROOT_DIR%\backend"
+    :: Enter backend folder and remember previous location.
+
+    if not exist "node_modules" (
+        echo Installing backend packages...
+        call npm install
+        if %errorlevel% neq 0 (
+            echo Backend installation failed.
+            pause
+            exit /b %errorlevel%
+        )
+    ) else (
+        echo Backend packages already installed.
+    )
+
+    popd
+    :: Return to previous folder.
+
+    :: =========================
+    :: STEP 2 - Frontend
+    :: =========================
+
+    pushd "%ROOT_DIR%\frontend"
+
+    if not exist "node_modules" (
+        echo Installing frontend packages...
+        call npm install
+    )
+
+    call npm run build
+    :: Build production files (usually frontend/dist).
+
+    if %errorlevel% neq 0 (
+        echo Frontend build failed.
+        pause
+        exit /b %errorlevel%
+    )
+
+    popd
+
+    :: Verify build folder exists.
+    if not exist "%ROOT_DIR%\frontend\dist" (
+        echo Build folder not found.
+        pause
+        exit /b 1
+    )
+
+    :: =========================
+    :: STEP 3 - Start Server
+    :: =========================
+
+    pushd "%ROOT_DIR%\backend"
+
+    call npm start
+    :: Starts the backend which also serves the frontend.
+
+    popd
+
+    pause
+    :: Keep window open after program exits.
+
+What can be reused?
+
+✔ Error handling with %errorlevel%
+
+✔ %~dp0 to locate the project
+
+✔ ROOT_DIR
+
+✔ pushd / popd
+
+✔ Automatic npm install
+
+✔ npm run build
+
+✔ npm start
+
+What usually changes?
+
+-   Window title
+-   Backend folder name (backend -> server)
+-   Frontend folder name (frontend -> client)
+-   Build output (dist, build, .next, etc.)
+-   Start command (npm start vs npm run dev)
+-   Port number shown in messages
+
+Best practices
+
+-   Keep run.bat in the project root.
+-   Always check %errorlevel% after important commands.
+-   Use call before npm commands inside batch files.
+-   Use pushd/popd instead of many cd commands.
+-   Add more checks later (Node version, .env creation, opening
+    browser).
+
+This template is suitable for most future Node.js + Express + React
+projects with only minor edits.
