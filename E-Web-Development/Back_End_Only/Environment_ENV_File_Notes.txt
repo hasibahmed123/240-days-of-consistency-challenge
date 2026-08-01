@@ -1,0 +1,71 @@
+Environment (.env) File Notes
+
+What is a .env file?
+
+A .env file stores environment variables used by an application. These
+values configure the app without hardcoding them into the source code.
+
+Common contents
+
+-   Database URL, username, password
+-   API keys (OpenAI, Stripe, Google Maps, etc.)
+-   JWT secrets
+-   SMTP/email credentials
+-   Cloud service credentials
+-   Application settings (PORT, NODE_ENV)
+
+Example:
+
+    PORT=3000
+    NODE_ENV=development
+    DB_PASSWORD=your_password
+    API_KEY=your_api_key
+
+Why use a .env file?
+
+-   Keeps configuration separate from code.
+-   Makes it easy to use different settings for development, testing,
+    and production.
+-   Prevents sensitive information from being hardcoded.
+
+Why should you NEVER upload it to GitHub?
+
+Many .env files contain secrets. If exposed, attackers may: - Access
+your database. - Abuse paid APIs. - Read, modify, or delete data. - Send
+emails using your account. - Increase your cloud costs.
+
+Even if your current .env only contains public values, following the
+habit of keeping it out of Git helps prevent accidental leaks later.
+
+Safe practice
+
+1.  Add .env to .gitignore.
+2.  Commit .env.example instead.
+
+Example .gitignore:
+
+    .env
+
+Example .env.example:
+
+    DB_HOST=
+    DB_USER=
+    DB_PASSWORD=
+    API_KEY=
+    JWT_SECRET=
+
+Note about Vite and Supabase
+
+Variables beginning with VITE_ are exposed to the frontend.
+
+Example: - VITE_SUPABASE_URL – Public. - VITE_SUPABASE_ANON_KEY – Public
+client key intended for frontend use.
+
+Never expose: - Service role keys - Database passwords - Private API
+keys - Secret tokens
+
+Summary
+
+A .env file is used to store configuration and secrets. Keep real .env
+files private, ignore them with .gitignore, and share only a
+.env.example template with placeholder values.
