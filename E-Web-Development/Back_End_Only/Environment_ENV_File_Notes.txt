@@ -68,4 +68,4 @@ Summary
 
 A .env file is used to store configuration and secrets. Keep real .env
 files private, ignore them with .gitignore, and share only a
-.env.example template with placeholder values.
+.env.example template with placeholder values.Shouldn't be uploaded in your GitHub, although I do upload lol.
